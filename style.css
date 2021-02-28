@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    text-align: center;
+    font-size: 50px;
+    background: mediumaquamarine;
+    border-bottom: 2px solid black;
+    padding-top: 20px;
+    height: 100px;
+}
+
+/* main content*/
+
+.main{
+    display: grid;
+    justify-items: center;
+}
+
+.game-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 180px);
+    grid-gap: 0px;
+    margin: 50px 20px;
+}
+
+.grid-item{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+/* footer */
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    background: gainsboro;
+    border-top: 2px solid black;
+}
+
+/* responsiveness */
+
+@media screen and (display-mode: fullscreen){
+    .game-grid{
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(3, 225px);
+        margin: 35px 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .game-grid{
+        grid-template-columns: repeat(3, 175px);
+        grid-template-rows: repeat(3, 150px);
+    } 
+}
+
+@media screen and (max-width: 525px){
+    .game-grid{
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(3, 100px);
+    }
+}
