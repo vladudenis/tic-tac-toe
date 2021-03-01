@@ -25,6 +25,7 @@ header{
 .main{
     display: grid;
     justify-items: center;
+    margin-top: 25px;
 }
 
 .game-grid{
@@ -32,14 +33,44 @@ header{
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 180px);
     grid-gap: 0px;
-    margin: 50px 20px;
 }
 
 .grid-item{
     border: 1px solid black;
     padding: 20px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 80px;
 }
 
+.restart-btn{
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    border: 2px solid black;
+    background: aquamarine;
+    border-radius: 10px;
+}
+
+.restart-btn:hover{
+    background-color: turquoise;
+}
+
+.restart-btn:active{
+    background-color: teal;
+}
+
+.made-move{
+    color: black;
+}
+
+.show-move{
+    color: grey;
+}
+
+.has-won{
+    background-color: green;
+}
 /* footer */
 
 footer{
@@ -55,9 +86,11 @@ footer{
 
 @media screen and (display-mode: fullscreen){
     .game-grid{
-        grid-template-columns: repeat(3, 250px);
-        grid-template-rows: repeat(3, 225px);
-        margin: 35px 20px;
+        grid-template-columns: repeat(3, 225px);
+        grid-template-rows: repeat(3, 200px);
+    }
+    .restart-btn{
+        margin-top: 30px;
     }
 }
 
@@ -65,12 +98,33 @@ footer{
     .game-grid{
         grid-template-columns: repeat(3, 175px);
         grid-template-rows: repeat(3, 150px);
-    } 
+    }
+    .grid-item{
+        line-height: 120px;
+    }
+    .restart-btn{
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 525px){
     .game-grid{
         grid-template-columns: repeat(3, 120px);
         grid-template-rows: repeat(3, 100px);
+    }
+    .grid-item{
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-height: 750px){
+    *{
+        overflow: auto;
+    }
+    footer{
+        display: none;
+    }
+    .restart-btn{
+        margin-bottom: 25px;
     }
 }
