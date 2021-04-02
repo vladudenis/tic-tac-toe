@@ -4,9 +4,10 @@ const Game = (function(){
     let _win = false;
 
     function _hasWon(){
-        if(_gameboard[0] == [_turn, _turn, _turn]
-            || _gameboard[1] == [_turn, _turn, _turn]
-            || _gameboard[2] == [_turn, _turn, _turn]
+        console.log(_gameboard[0]);
+        if((_gameboard[0][0] == _turn && _gameboard[0][1] == _turn && _gameboard[0][2] == _turn)
+            || (_gameboard[1][0] == _turn && _gameboard[1][1] == _turn && _gameboard[1][2] == _turn)
+            || (_gameboard[2][0] == _turn && _gameboard[2][1] == _turn && _gameboard[2][2] == _turn)
             || (_gameboard[0][0] == _turn && _gameboard[1][1] == _turn && _gameboard[2][2] == _turn)
             || (_gameboard[0][2] == _turn && _gameboard[1][1] == _turn && _gameboard[2][0] == _turn)
             || (_gameboard[0][0] == _turn && _gameboard[1][0] == _turn && _gameboard[2][0] == _turn)
